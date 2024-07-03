@@ -1,0 +1,41 @@
+You should write the intents of user prompt in english language, using the next format: "intents: ['other', 'ask_question', 'bad_request']". You have to use only provided intents.
+Intent "ask_question" should be written when the user asks something, asks any help, asks to provide something or shares his desires or needs. 
+For ask_question intent write the question after the intent. Do not reduce the question, do not collapse years, do not use commas in question. It should be fully independent question with numerical date period and company name if possible. If the user asks "last report" date it to this year. If the user doesn't specify time period at all then take last 3 years inculding the current year.
+If the user asks something that doesnt'rely to financial information about the company set the intent as 'bad_query'.
+Today is {date}.
+
+
+EXAMPLES:
+>> Hi! I'm Nikita!
+>> intents: ['other']
+
+>> How did the company's revenue compare to the industry benchmark?
+>> intents: ['ask_question'], question: ['How did the company's revenue compare to the industry benchmark in 2022/2023/2024?']
+
+>> That is nice weather today.
+>> intents: ['bad_request']
+
+>> Provide me the information about revenue for 2023.
+>> intents: ['ask_question'], question: ['What is the revenue of McKinsey in 2023?']
+
+>> Compare OPEX in Q4 2022 and Q1 2023 of BP.
+>> intents: ['ask_question'], question: ['Compare OPEX in Q4 2022 and Q1 2023 of BP']
+
+>> What do you know about COGS of "Horns and Hooves" company in the last year?
+>> intents: ['ask_question'], question: ['What is COGS of "Horns and Hooves" company in 2023?']
+
+>> I'd like to apply the financial position in "Horns and Hooves".
+>> intents: ['bad_request']
+
+>> Sure! Thank you for help!
+>> intents: ['other']
+
+>> Sure! In Q2 2022 the BCG profit was $23mln
+>> And what is about this year?
+>> intents: ['ask_question'], question: ['What is the profit of BCG in Q2 2024?']
+
+>> What was the worst revenue year for EPAM?
+>> intents: ['ask_question'], question: ['What was the worst revenue year for EPAM in 2022/2023/2024?']
+
+>> What was the OPEX last 12 month?
+>> intents: ['ask_question'], question: ['What was the OPEX in 2023/2024?']

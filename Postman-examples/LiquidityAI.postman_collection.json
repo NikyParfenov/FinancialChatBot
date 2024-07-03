@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "6a5c7a65-9b1d-4991-ae8f-6af2e08de01e",
+		"name": "LiquidityAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20519184"
+	},
+	"item": [
+		{
+			"name": "Add_docs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/nikitaparfenov/Desktop/FinancialChatBot/src/company_reports/Asgard.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/add_docs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"add_docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rm_docs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"company\": \"Asgard\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/rm_docs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rm_docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/companies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message_Test1_part1_(connected_QA)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"00000000-0000-0000-0000-000000000000\",\n    \"message\": \"Hi! How is a going? When was the highest revenue of Asgard?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/message",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message_Test1_part2_(connected_QA)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"00000000-0000-0000-0000-000000000000\",\n    \"message\": \"and lowest?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/message",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message_Test2_(period)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"00000000-0000-0000-0000-000000000000\",\n    \"message\": \"How did the company's revenue compare to the industry benchmark in last twelve months?\",\n    \"company\": \"Niflheim\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/message",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message_Test3_(bad-request)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"00000000-0000-0000-0000-000000000000\",\n    \"message\": \"Hi! How is a going? What do you think about Trump?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/message",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message_Test4_(period)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"00000000-0000-0000-0000-000000000000\",\n    \"message\": \"What was the company's COGS in last twelve months?\",\n    \"company\": \"Midgard\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/message",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message_Test5_(specific)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"00000000-0000-0000-0000-000000000000\",\n    \"message\": \"How did the company's OPEX in Q4 2023 compare to Q3 2023??\",\n    \"company\": \"Niflheim\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/message",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message_Test6_(specific)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"00000000-0000-0000-0000-000000000002\",\n    \"message\": \"What was the total OPEX of the company in the 2nd half of the 2022-2023 years?\",\n    \"company\": \"Niflheim\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/message",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"message"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
