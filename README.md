@@ -103,3 +103,11 @@ curl --location 'http://127.0.0.1:8001/api/message' \
     "company": "Niflheim"
 }'
 ```
+
+## Possible improvements
+1. Split chat-bot service and doc-processing services. They have different logic, and consumes different resources and time.
+2. Add status for doc-processing (in queue, processing, completed, failed...). This will help to monitor status via API-endpoint.
+3. Add smart chunking for docs. For this case all chunks are already splitted by 'new line' into <150 tokens, but in general the text can be solid and huge.
+4. Add document time-period, type of finance (i.e. COGS, Revenue etc) and probably dynamics (increase/decrease) to a separate columns, and vectorize it with company name as well.
+5. For benchamarking add either web-search service, either document from benchmars agencies / API to these agencies.
+   
