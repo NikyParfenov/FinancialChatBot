@@ -110,4 +110,5 @@ curl --location 'http://127.0.0.1:8001/api/message' \
 3. Add smart chunking for docs. For this case all chunks are already splitted by 'new line' into <150 tokens, but in general the text can be solid and huge.
 4. Add document time-period, type of finance (i.e. COGS, Revenue etc) and probably dynamics (increase/decrease) to a separate columns, and vectorize it with company name as well.
 5. For benchamarking add either web-search service, either document from benchmars agencies / API to these agencies.
-   
+6. Make parameters analysis for RAG system (select best threshold, amount of top_k chunks).
+7. Analyse reranking for RAG system, i.e. 1st similarity search relying on entites like company name, period, type of finance etc and reranking directly by chunks.
